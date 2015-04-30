@@ -31,7 +31,7 @@ kd = pc_1.make_kdtree_flann()
 # find the single closest points to each point in point cloud 2
 # (and the sqr distances)
 indices, sqr_distances = kd.nearest_k_search_for_cloud(pc_2, 1)
-for i in range(pc_1.size):
+for i in range(pc_2.size):
     print('index of the closest point in pc_1 to point %d in pc_2 is %d'
           % (i, indices[i, 0]))
     print('the squared distance between these two points is %f'
